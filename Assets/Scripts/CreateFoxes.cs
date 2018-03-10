@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CreateFoxes : MonoBehaviour {
 
+
+    [SerializeField] private float radius;
     [SerializeField] private GameObject[] foxes;
 
     void Start(){
         Vector3 center = transform.position;
         for (int i = 0; i < foxes.Length; i++) {
-            Vector3 pos = RandomCircle(center, 5f);
+            Vector3 pos = RandomCircle(center, radius);
             Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center);
             Instantiate(foxes[Random.Range(0, foxes.Length)], pos, rot);
         }
