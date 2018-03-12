@@ -6,14 +6,23 @@ public class CreateFoxes : MonoBehaviour {
 
 
     [SerializeField] private float radius;
+    [SerializeField] private float radiusSum;
+    [SerializeField] private int numFloors;
     [SerializeField] private GameObject[] foxes;
 
     void Start(){
         Vector3 center = transform.position;
-        for (int i = 0; i < foxes.Length; i++) {
-            Vector3 pos = RandomCircle(center, radius);
-            Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center);
-            Instantiate(foxes[Random.Range(0, foxes.Length)], pos, rot);
+        float sum = 0;
+        GameObject Foxes = new GameObject("Foxes");
+        for (int i = 0; i < numFloors; i++) {
+            for (int j = 0; j < foxes.Length; j++)
+            {
+                Vector3 pos = RandomCircle(center, radius + sum);
+                Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center);
+                GameObject randFox = Instantiate(foxes[Random.Range(0, foxes.Length)], pos, rot);
+                randFox.transform.SetParent(Foxes.transform);
+            }
+            sum += radiusSum;
         }
     }
 

@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   UseCamera: 0
-  Target: {fileID: 0}
+  Target: {fileID: 4550895671040492, guid: 58a926fbec501804fbaceba7dbb90832, type: 2}
   LimitAngle: 80
   Smoothness: 5
   UpVector: {x: 0, y: 1, z: 0}
