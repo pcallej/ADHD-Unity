@@ -5,24 +5,32 @@ using UnityEngine;
 public class CreateFoxes : MonoBehaviour {
 
 
+    [SerializeField] GameObject camera;
     [SerializeField] private float radius;
-    [SerializeField] private float radiusSum;
+    [SerializeField] private float radiusDifference;
     [SerializeField] private int numFloors;
-    [SerializeField] private GameObject[] foxes;
+    private Vector3 vertical;
+    [SerializeField] private Vector3 addVertical;
+    [SerializeField] private Vector3 correction;
+    [SerializeField] public GameObject[] foxes;
+    [SerializeField] private Diffculty diffculty;
 
     void Start(){
         Vector3 center = transform.position;
         float sum = 0;
         GameObject Foxes = new GameObject("Foxes");
         for (int i = 0; i < numFloors; i++) {
-            for (int j = 0; j < foxes.Length; j++)
+            for (int j = 0; j < diffculty.numAnimals; j++)
             {
                 Vector3 pos = RandomCircle(center, radius + sum);
                 Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center);
-                GameObject randFox = Instantiate(foxes[Random.Range(0, foxes.Length)], pos, rot);
+                GameObject randFox = Instantiate(foxes[Random.Range(0, foxes.Length)], pos + vertical, rot);
+                randFox.transform.Rotate(correction);
                 randFox.transform.SetParent(Foxes.transform);
+                randFox.transform.LookAt(camera.transform);
             }
-            sum += radiusSum;
+            sum += radiusDifference;
+            vertical += addVertical;
         }
     }
 

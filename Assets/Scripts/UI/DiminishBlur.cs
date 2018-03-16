@@ -21,5 +21,8 @@ public class DiminishBlur : MonoBehaviour {
 	void Update () {
         float blur = Mathf.Lerp(maxBlur,minBlur,Time.time / 10);
         mat.SetFloat("_Radius",blur);
+        if (blur == minBlur) {
+            gameObject.SetActive(false);
+        }
 	}
 }
