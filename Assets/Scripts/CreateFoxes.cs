@@ -13,7 +13,7 @@ public class CreateFoxes : MonoBehaviour {
     [SerializeField] private Vector3 addVertical;
     [SerializeField] private Vector3 correction;
     [SerializeField] public GameObject[] foxes;
-    [SerializeField] private Diffculty diffculty;
+    [SerializeField] private Difficulty diffculty;
 
     void Start(){
         Vector3 center = transform.position;

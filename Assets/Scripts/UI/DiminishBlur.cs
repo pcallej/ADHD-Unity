@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class DiminishBlur : MonoBehaviour {
 
+    [SerializeField] private Difficulty difficulty;
     [SerializeField] private float maxBlur;
     [SerializeField] private float minBlur;
      private Image blurImage;
      private Material mat;
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,8 +23,11 @@ public class DiminishBlur : MonoBehaviour {
 	void Update () {
         float blur = Mathf.Lerp(maxBlur,minBlur,Time.time / 10);
         mat.SetFloat("_Radius",blur);
-        if (blur == minBlur) {
-            gameObject.SetActive(false);
+        if (difficulty.finished == false) {
+            if (blur == minBlur)
+            {
+                gameObject.SetActive(false);
+            }
         }
 	}
 }
