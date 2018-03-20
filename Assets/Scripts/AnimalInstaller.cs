@@ -7,7 +7,7 @@ public class AnimalInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<GameObject>().FromInstance(gameObject);
-        Container.Bind<FoxFactory>().AsSingle().NonLazy();
+        Container.Bind<FoxFactory>().FromNew ().AsSingle ();
     }
 }
 

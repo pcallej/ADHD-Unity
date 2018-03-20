@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class CreateFoxes : MonoBehaviour {
 
@@ -14,8 +15,11 @@ public class CreateFoxes : MonoBehaviour {
     [SerializeField] private Vector3 correction;
     [SerializeField] public GameObject[] foxes;
     [SerializeField] private Difficulty diffculty;
+    [Inject]
+    private FoxFactory factory;
 
-    void Start(){
+    private void Start()
+    {
         Vector3 center = transform.position;
         float sum = 0;
         GameObject Foxes = new GameObject("Foxes");
@@ -34,7 +38,8 @@ public class CreateFoxes : MonoBehaviour {
         }
     }
 
-    Vector3 RandomCircle(Vector3 center, float radius) {
+    private Vector3 RandomCircle(Vector3 center, float radius) 
+    {
         float ang = Random.value * 360;
         Vector3 pos;
         pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
