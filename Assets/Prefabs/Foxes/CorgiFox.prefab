@@ -2120,43 +2120,43 @@ MonoBehaviour:
     input: Jump
     key: 0
     GetPressed: 0
-  - active: 1
+  - active: 0
     name: Shift
     type: 0
     input: Fire3
     key: 0
     GetPressed: 0
-  - active: 1
+  - active: 0
     name: Attack1
     type: 0
     input: Fire1
     key: 0
     GetPressed: 1
-  - active: 1
+  - active: 0
     name: Speed1
     type: 1
     input: Value
     key: 49
     GetPressed: 0
-  - active: 1
+  - active: 0
     name: Speed2
     type: 1
     input: Value
     key: 50
     GetPressed: 0
-  - active: 1
+  - active: 0
     name: Speed3
     type: 1
     input: Value
     key: 51
     GetPressed: 0
-  - active: 1
+  - active: 0
     name: Action
     type: 1
     input: Value
     key: 101
     GetPressed: 1
-  - active: 1
+  - active: 0
     name: Stun
     type: 1
     input: Value
