@@ -219,7 +219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1282059727324640
 GameObject:
   m_ObjectHideFlags: 1
@@ -252,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1335509780228244
 GameObject:
   m_ObjectHideFlags: 1
@@ -316,6 +316,8 @@ GameObject:
   - component: {fileID: 114110309384562852}
   - component: {fileID: 114764644301369470}
   - component: {fileID: 82225734608029986}
+  - component: {fileID: 114454908061708568}
+  - component: {fileID: 114615268545931532}
   m_Layer: 20
   m_Name: Fox Black
   m_TagString: Player
@@ -1214,7 +1216,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155966017668368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.2732215, y: 7.914387, z: -9.828391}
+  m_LocalPosition: {x: 6.7611575, y: 2.14, z: -11.120845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113900511679942}
@@ -1582,7 +1584,7 @@ BoxCollider:
   m_GameObject: {fileID: 1310290674389884}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.8366139, z: 0.44}
   m_Center: {x: -0.0000008009374, y: 0.41830695, z: 0.00000035762787}
@@ -2038,6 +2040,18 @@ MonoBehaviour:
   DebugColor: {r: 0, g: 0.91724133, b: 1, a: 1}
   DrawAxis: 0
   AxisSize: 0.3
+--- !u!114 &114454908061708568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367621586059184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658fe7ce18384d8418a3ae3f04901965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicTrigger: 0
 --- !u!114 &114479392843004742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2083,6 +2097,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaitNextStep: 0.5
   StepAudio: {fileID: 0}
+--- !u!114 &114615268545931532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367621586059184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114454908061708568}
+          m_MethodName: activateMagic
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114630455241673510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2365,7 +2409,7 @@ SphereCollider:
   m_GameObject: {fileID: 1494859730884454}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.095
   m_Center: {x: 0, y: 0.06, z: 0}
@@ -2377,7 +2421,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1282059727324640}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.09
   m_Height: 0.31
   m_Direction: 0
@@ -2390,7 +2434,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1057436618191092}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.11309509
   m_Height: 0.45255604
   m_Direction: 0
@@ -2403,7 +2447,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1494859730884454}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.05
   m_Height: 0.2903862
   m_Direction: 1
@@ -2416,7 +2460,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1125915038794630}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.121
   m_Height: 0.45255604
   m_Direction: 0
@@ -2429,7 +2473,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1089249434387166}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.121
   m_Height: 0.45255604
   m_Direction: 0

@@ -29,6 +29,8 @@ GameObject:
   - component: {fileID: 114294106689304580}
   - component: {fileID: 82812539954081206}
   - component: {fileID: 114139570779710980}
+  - component: {fileID: 114578777553901772}
+  - component: {fileID: 114884717261456724}
   m_Layer: 20
   m_Name: Fox Corgi
   m_TagString: Player
@@ -531,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1636145036307350
 GameObject:
   m_ObjectHideFlags: 1
@@ -767,7 +769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1932565634564736
 GameObject:
   m_ObjectHideFlags: 1
@@ -977,7 +979,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870200384079868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.0707026, y: 7.805152, z: -9.0563135}
+  m_LocalPosition: {x: 11.745019, y: 2.7192297, z: -10.2814455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4571052820747338}
@@ -1636,7 +1638,7 @@ BoxCollider:
   m_GameObject: {fileID: 1612150226244582}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.8366139, z: 0.44}
   m_Center: {x: -0.0000008009374, y: 0.41830695, z: 0.00000035762787}
@@ -2060,6 +2062,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaitNextStep: 0.5
   StepAudio: {fileID: 0}
+--- !u!114 &114578777553901772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001403995137452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114884717261456724}
+          m_MethodName: activateMagic
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114614006195359530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2281,6 +2313,18 @@ MonoBehaviour:
   debugSize: 0.03
   DebugColor: {r: 1, g: 1, b: 0, a: 1}
   drawRay: 1
+--- !u!114 &114884717261456724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001403995137452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658fe7ce18384d8418a3ae3f04901965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicTrigger: 0
 --- !u!114 &114907771565007354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2348,7 +2392,7 @@ SphereCollider:
   m_GameObject: {fileID: 1206812621477648}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.095
   m_Center: {x: 0, y: 0.06, z: 0}
@@ -2433,7 +2477,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1217579663112622}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.09
   m_Height: 0.31
   m_Direction: 0
@@ -2446,7 +2490,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1006569191768214}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.121
   m_Height: 0.45255604
   m_Direction: 0
@@ -2459,7 +2503,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1805244125057152}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.11309509
   m_Height: 0.45255604
   m_Direction: 0
@@ -2472,7 +2516,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1206812621477648}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.05
   m_Height: 0.2903862
   m_Direction: 1

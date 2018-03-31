@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 114551926485977866}
   - component: {fileID: 114650853588717560}
   - component: {fileID: 114739036811558926}
+  - component: {fileID: 114713554960996668}
+  - component: {fileID: 114346855576291138}
   m_Layer: 20
   m_Name: Fox Baby
   m_TagString: Player
@@ -120,12 +122,12 @@ GameObject:
   - component: {fileID: 65296286361253104}
   - component: {fileID: 114393590520674126}
   m_Layer: 20
-  m_Name: GameObject
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1184865109742718
 GameObject:
   m_ObjectHideFlags: 1
@@ -234,7 +236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1291609849536764
 GameObject:
   m_ObjectHideFlags: 1
@@ -829,7 +831,7 @@ Transform:
   - {fileID: 4684627785634858}
   - {fileID: 4970667922649754}
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4075509282036826
 Transform:
@@ -854,13 +856,13 @@ Transform:
   m_LocalPosition: {x: -0.048999965, y: 0.15999985, z: -0.015000343}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
+  - {fileID: 4566513325958788}
   - {fileID: 4681582537569584}
   - {fileID: 4935217330179720}
   - {fileID: 4517560797970384}
   - {fileID: 4072151084154788}
   - {fileID: 4562546542698598}
   - {fileID: 4447894300404314}
-  - {fileID: 4566513325958788}
   m_Father: {fileID: 4603497557554280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1081,7 +1083,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4450845683416562
 Transform:
@@ -1134,7 +1136,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4518412981447532
 Transform:
@@ -1180,7 +1182,7 @@ Transform:
   m_Children:
   - {fileID: 4274788886670436}
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4566513325958788
 Transform:
@@ -1193,7 +1195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4569028805684216
 Transform:
@@ -1229,7 +1231,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529311573972970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.672937, y: 8.207875, z: -9.854959}
+  m_LocalPosition: {x: 3.604332, y: 2.2031522, z: -12.529007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4105958870215902}
@@ -1276,7 +1278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4683721534003316
 Transform:
@@ -1468,7 +1470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4105958870215902}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4956881191594664
 Transform:
@@ -1580,7 +1582,7 @@ BoxCollider:
   m_GameObject: {fileID: 1258181780396680}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.8366139, z: 0.44}
   m_Center: {x: -0.0000008009374, y: 0.41830695, z: 0.00000035762787}
@@ -1760,6 +1762,36 @@ MonoBehaviour:
       m_TypeName: MalbersAnimations.Events.TransformEvent, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   showMeshesList: 1
+--- !u!114 &114346855576291138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069129772699112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114713554960996668}
+          m_MethodName: activateMagic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!114 &114367406930463680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2163,6 +2195,18 @@ MonoBehaviour:
   debugSize: 0.03
   DebugColor: {r: 1, g: 1, b: 0, a: 1}
   drawRay: 1
+--- !u!114 &114713554960996668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069129772699112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658fe7ce18384d8418a3ae3f04901965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicTrigger: 0
 --- !u!114 &114739036811558926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2325,7 +2369,7 @@ SphereCollider:
   m_GameObject: {fileID: 1988431959491572}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.095
   m_Center: {x: 0, y: 0.06, z: 0}
@@ -2337,7 +2381,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1510563962909932}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.11309509
   m_Height: 0.45255604
   m_Direction: 0
@@ -2350,7 +2394,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1389571275563634}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.121
   m_Height: 0.45255604
   m_Direction: 0
@@ -2363,7 +2407,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1988431959491572}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.05
   m_Height: 0.22354025
   m_Direction: 1
@@ -2389,7 +2433,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1854017269349406}
   m_Material: {fileID: 13400000, guid: 54174b87a6301064ea8788686f85bda8, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.09
   m_Height: 0.31
   m_Direction: 0
