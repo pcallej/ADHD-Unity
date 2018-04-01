@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 114615268545931532}
   m_Layer: 20
   m_Name: Fox Black
-  m_TagString: Player
+  m_TagString: Black
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

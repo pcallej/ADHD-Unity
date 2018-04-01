@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 114330953413847466}
   m_Layer: 20
   m_Name: Fox Fennec
-  m_TagString: Player
+  m_TagString: Fennec
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

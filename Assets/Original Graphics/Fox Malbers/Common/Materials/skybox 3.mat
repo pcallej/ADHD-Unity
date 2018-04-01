@@ -63,7 +63,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Exposure: 1
+    - _Exposure: 1.19
     - _Glossiness: 0.5
     - _Metallic: 0
     - _Mode: 0
@@ -76,4 +76,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint: {r: 0.734, g: 0.5190311, b: 0.5190311, a: 0}
+    - _Tint: {r: 0.6544118, g: 0.4571259, b: 0.4571259, a: 0}

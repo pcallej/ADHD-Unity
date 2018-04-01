@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 114346855576291138}
   m_Layer: 20
   m_Name: Fox Baby
-  m_TagString: Player
+  m_TagString: Baby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

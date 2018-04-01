@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: 114884717261456724}
   m_Layer: 20
   m_Name: Fox Corgi
-  m_TagString: Player
+  m_TagString: Corgi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

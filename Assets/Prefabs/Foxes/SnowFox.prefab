@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 114815014391042696}
   m_Layer: 20
   m_Name: Fox Snow
-  m_TagString: Player
+  m_TagString: Snow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

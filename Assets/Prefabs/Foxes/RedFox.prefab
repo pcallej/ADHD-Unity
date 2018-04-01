@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 114343451808864496}
   m_Layer: 20
   m_Name: Fox Orange
-  m_TagString: Player
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
