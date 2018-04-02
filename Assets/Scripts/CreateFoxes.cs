@@ -20,11 +20,13 @@ public class CreateFoxes : MonoBehaviour {
     public GameObject Foxes;
     private GameObject master;
     private animalSelector animSelector;
+    [HideInInspector] public int numberOfTargets; 
 
     private void Start()
     {
         InstantiateAnimals();
-        countTargets();
+        numberOfTargets = countTargets();
+        Debug.Log(numberOfTargets);
     }
 
     private void InstantiateAnimals() {
@@ -68,7 +70,6 @@ public class CreateFoxes : MonoBehaviour {
                 counter++;
             }
         }
-        Debug.Log("There are " + counter.ToString() + " targets");
         return counter;
     }
 }

@@ -8,11 +8,13 @@ public class TriggerAnimations : MonoBehaviour {
     private Animator anim;
     public bool magicTrigger;
     private bool isTarget;
+    private gameProggresion gameProg;
 
     public void Start() {
         anim = gameObject.GetComponent<Animator>();
         GameObject gameMaster = GameObject.FindGameObjectWithTag("Master");
         animalSelector animSelector = gameMaster.GetComponent<animalSelector>();
+        gameProg = gameMaster.GetComponent<gameProggresion>();
         if (gameObject.tag == animSelector.selectedAnimal.transform.GetChild(0).tag) {
             isTarget = true;
         }
@@ -28,7 +30,7 @@ public class TriggerAnimations : MonoBehaviour {
             if (activate){
                 magic = gameObject.transform.GetChild(4).GetChild(1).gameObject;
                 magic.SetActive(true);
-                Debug.Log("magic activated");
+                gameProg.counter++; 
             }
         }
     }
