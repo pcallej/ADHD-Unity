@@ -17,13 +17,22 @@ public class CreateFoxes : MonoBehaviour {
     [SerializeField] private Difficulty diffculty;
     [Inject]
     private FoxFactory factory;
+    public GameObject Foxes;
+    private GameObject master;
+    private animalSelector animSelector;
 
     private void Start()
     {
+        InstantiateAnimals();
+        countTargets();
+    }
+
+    private void InstantiateAnimals() {
         Vector3 center = transform.position;
         float sum = 0;
-        GameObject Foxes = new GameObject("Foxes");
-        for (int i = 0; i < numFloors; i++) {
+        Foxes = new GameObject("Foxes");
+        for (int i = 0; i < numFloors; i++)
+        {
             for (int j = 0; j < diffculty.numAnimals; j++)
             {
                 Vector3 pos = RandomCircle(center, radius + sum);
@@ -47,5 +56,19 @@ public class CreateFoxes : MonoBehaviour {
         pos.y = center.y;
 
         return pos;
+    }
+
+    private int countTargets()
+    {
+        master = GameObject.FindGameObjectWithTag("Master");
+        animSelector = master.GetComponent<animalSelector>();
+        int counter = 0;
+        for (int i = 0; i < Foxes.transform.childCount; i++){
+            if (Foxes.transform.GetChild(i).GetChild(0).tag == animSelector.selectedAnimal.transform.GetChild(0).tag) {
+                counter++;
+            }
+        }
+        Debug.Log("There are " + counter.ToString() + " targets");
+        return counter;
     }
 }

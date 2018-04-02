@@ -11,6 +11,7 @@ TagManager:
   - Fennec
   - Red
   - Snow
+  - Master
   layers:
   - Default
   - TransparentFX

@@ -1780,7 +1780,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 114713554960996668}
           m_MethodName: activateMagic
-          m_Mode: 1
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2207,6 +2207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicTrigger: 0
+  gameMaster: {fileID: 0}
 --- !u!114 &114739036811558926
 MonoBehaviour:
   m_ObjectHideFlags: 1

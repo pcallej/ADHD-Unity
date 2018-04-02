@@ -2063,6 +2063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicTrigger: 0
+  gameMaster: {fileID: 1253673034224112, guid: 7f6e72d9fec24634d813a1d7fa53d24e, type: 2}
 --- !u!114 &114484790446784878
 MonoBehaviour:
   m_ObjectHideFlags: 1
