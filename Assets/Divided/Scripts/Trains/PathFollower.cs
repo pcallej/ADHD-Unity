@@ -7,7 +7,7 @@ public class PathFollower : MonoBehaviour {
     public PathEditor pathToFollow;
     public int currentWayPointID = 0;
     public float speed;
-    private float reachDistance = 0f;
+    private float reachDistance = 0.3f;
     public float rotationSpeed = 5.0f;
     public string pathName;
 

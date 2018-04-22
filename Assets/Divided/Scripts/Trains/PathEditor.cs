@@ -41,7 +41,7 @@ public class PathEditor : MonoBehaviour {
                 {
                     Vector3 previous = pathObjects[i - 1].position;
                     Gizmos.DrawLine(previous, currentPosition);
-                    Gizmos.DrawWireSphere(currentPosition,0.3f);
+                    Gizmos.DrawWireSphere(currentPosition,0.1f);
                 }
             }
         }
