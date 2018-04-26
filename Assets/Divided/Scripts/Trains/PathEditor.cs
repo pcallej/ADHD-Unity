@@ -23,6 +23,9 @@ public class PathEditor : MonoBehaviour {
             case "Green":
                 Gizmos.color = Color.green;
                 break;
+            case "Yellow":
+                Gizmos.color = Color.yellow;
+                break;
         }
         transformArray = GetComponentsInChildren<Transform>();
         pathObjects.Clear();
