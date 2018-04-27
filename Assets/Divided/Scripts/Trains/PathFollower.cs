@@ -12,14 +12,16 @@ public class PathFollower : MonoBehaviour {
     public float rotationSpeed = 5.0f;
     public string pathName;
 
-    private Vector3 lastPos, currentPos;
-    
+    private Vector3 initPos, lastPos, currentPos;
+    [SerializeField] private GameObject explosion;
 
 	// Use this for initialization
 	void Start ()
     {
         //pathToFollow = GameObject.Find(pathName).GetComponent<PathEditor>();
         lastPos = transform.position;
+        initPos = transform.position;
+        explosion = gameObject.transform.GetChild(0).gameObject;
 	}
 	
 	// Update is called once per frame
@@ -36,4 +38,20 @@ public class PathFollower : MonoBehaviour {
             currentWayPointID++;
         }
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "crash") {
+            Debug.Log("crashed");
+            explosion.SetActive(true);
+            WaitSeconds(3);
+            explosion.SetActive(false);
+            currentPos = initPos;
+            currentWayPointID = 0;
+        }           
+    }
+
+    IEnumerator WaitSeconds(int numSeconds) {
+        yield return new WaitForSeconds(numSeconds);
+    }
 }

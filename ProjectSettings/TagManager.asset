@@ -12,6 +12,9 @@ TagManager:
   - Red
   - Snow
   - Master
+  - CanDestroy
+  - Robot
+  - crash
   layers:
   - Default
   - TransparentFX
