@@ -14,7 +14,7 @@ public class TrainHit : MonoBehaviour {
                 break;
             case "Goal":
                 Debug.Log("Train hit goal");
-                other.gameObject.SetActive(false);
+                other.transform.GetComponentInParent<PathFollower>().TrainSuccess();
                 break;
         }
     }

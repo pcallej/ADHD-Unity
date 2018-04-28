@@ -13,6 +13,7 @@ public class PathFollower : MonoBehaviour {
     public string pathName;
 
     private Vector3 initPos, lastPos, currentPos;
+    private Quaternion initRot;
     [SerializeField] private GameObject explosion;
     
 	void Start ()
@@ -20,6 +21,7 @@ public class PathFollower : MonoBehaviour {
         //pathToFollow = GameObject.Find(pathName).GetComponent<PathEditor>();
         lastPos = transform.position;
         initPos = transform.position;
+        initRot = transform.rotation;
 	}
 	
 	void Update ()
@@ -37,11 +39,22 @@ public class PathFollower : MonoBehaviour {
 	}
 
     public void TrainCrashed() {
-        explosion.SetActive(true);
-
+        Instantiate(explosion, gameObject.transform.position,gameObject.transform.rotation);
+        StartCoroutine(WaitSeconds(2));
+        gameObject.transform.position = initPos;
+        currentPos = initPos;
+        gameObject.transform.rotation = initRot;
+        currentWayPointID = 0;
     }
 
-    IEnumerator WaitSeconds(int numSeconds) {
+    public void TrainSuccess() {
+        gameObject.transform.position = initPos;
+        currentPos = initPos;
+        gameObject.transform.rotation = initRot;
+        currentWayPointID = 0;
+    }
+
+    private IEnumerator WaitSeconds(int numSeconds) {
         yield return new WaitForSeconds(numSeconds);
     }
 }
