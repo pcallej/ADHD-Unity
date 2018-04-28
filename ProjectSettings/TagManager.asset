@@ -15,6 +15,9 @@ TagManager:
   - CanDestroy
   - Robot
   - crash
+  - asteroid
+  - ship
+  - Goal
   layers:
   - Default
   - TransparentFX

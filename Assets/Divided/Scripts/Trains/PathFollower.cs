@@ -6,7 +6,7 @@ public class PathFollower : MonoBehaviour {
 
     public PathEditor pathToFollow;
     public int currentWayPointID = 0;
-    [Range(0f,2f)]
+    [Range(0f,5f)]
     public float speed;
     private float reachDistance = 0.3f;
     public float rotationSpeed = 5.0f;
@@ -14,17 +14,14 @@ public class PathFollower : MonoBehaviour {
 
     private Vector3 initPos, lastPos, currentPos;
     [SerializeField] private GameObject explosion;
-
-	// Use this for initialization
+    
 	void Start ()
     {
         //pathToFollow = GameObject.Find(pathName).GetComponent<PathEditor>();
         lastPos = transform.position;
         initPos = transform.position;
-        explosion = gameObject.transform.GetChild(0).gameObject;
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         float distance = Vector3.Distance(pathToFollow.pathObjects[currentWayPointID].position,transform.position);
@@ -39,16 +36,9 @@ public class PathFollower : MonoBehaviour {
         }
 	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "crash") {
-            Debug.Log("crashed");
-            explosion.SetActive(true);
-            WaitSeconds(3);
-            explosion.SetActive(false);
-            currentPos = initPos;
-            currentWayPointID = 0;
-        }           
+    public void TrainCrashed() {
+        explosion.SetActive(true);
+
     }
 
     IEnumerator WaitSeconds(int numSeconds) {
