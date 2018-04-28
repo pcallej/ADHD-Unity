@@ -15,6 +15,7 @@ public class PathFollower : MonoBehaviour {
     private Vector3 initPos, lastPos, currentPos;
     private Quaternion initRot;
     [SerializeField] private GameObject explosion;
+    public GameObject master;
     
 	void Start ()
     {
@@ -52,6 +53,8 @@ public class PathFollower : MonoBehaviour {
         currentPos = initPos;
         gameObject.transform.rotation = initRot;
         currentWayPointID = 0;
+        int newScore = master.GetComponent<TrainCount>().score++;
+        master.GetComponent<TrainCount>().UpdateScore(newScore);
     }
 
     private IEnumerator WaitSeconds(int numSeconds) {

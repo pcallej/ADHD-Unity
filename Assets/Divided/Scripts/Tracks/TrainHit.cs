@@ -9,11 +9,9 @@ public class TrainHit : MonoBehaviour {
     {
          switch (gameObject.tag) {
             case "crash":
-                Debug.Log("Train Hit track");
                 other.transform.GetComponentInParent<PathFollower>().TrainCrashed();
                 break;
             case "Goal":
-                Debug.Log("Train hit goal");
                 other.transform.GetComponentInParent<PathFollower>().TrainSuccess();
                 break;
         }
