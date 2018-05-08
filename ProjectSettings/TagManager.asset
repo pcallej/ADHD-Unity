@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - Baby
+  - Black
+  - Corgi
+  - Fennec
+  - Red
+  - Snow
+  - Master
+  - CanDestroy
+  - Robot
+  - crash
+  - asteroid
+  - ship
+  - Goal
   layers:
   - Default
   - TransparentFX
