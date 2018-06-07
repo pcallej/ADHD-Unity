@@ -15,9 +15,13 @@ TagManager:
   - CanDestroy
   - Robot
   - crash
-  - asteroid
   - ship
   - Goal
+  - Cube
+  - Sphere
+  - Terrain
+  - Rocks
+  - Trees
   layers:
   - Default
   - TransparentFX

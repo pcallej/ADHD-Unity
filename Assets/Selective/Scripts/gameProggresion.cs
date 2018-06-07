@@ -9,6 +9,7 @@ public class gameProggresion : MonoBehaviour {
     public int numTargets;
     public GameObject endScreen;
     public int counter;
+    public bool end = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class gameProggresion : MonoBehaviour {
 	void Update () {
         if (counter == createAnimals.numberOfTargets) {
             endScreen.SetActive(true);
+            end = true;
         }
 	}
 }
